@@ -9,8 +9,18 @@ body {
     background-color: #F4F2EF;
 }
 
+.cuerpo_home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
 
-.img-principal {
+.linea_nav {
+    background-color: #dfd6c8;
+    height: 1px;
+}
+
+.imagen_principal {
     width: 100vh;
 }
 
@@ -50,9 +60,6 @@ body {
 
 
 
-.img-principal {
-    width: 100%;
-}
 
 
 
@@ -287,6 +294,11 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #F4F2EF;
+}
+
+.card_carrito >* {
+    background-color: #F4F2EF;
 }
 
 .titulo_prenda {
@@ -295,6 +307,7 @@ main{
 
 .seleccionar_cantidad {
     max-width: 193px;
+    background-color: #F4F2EF;
 }
 
 .precio {
@@ -385,3 +398,102 @@ main{
 
 
 }
+
+/*------------------------ Catalogo --------------------- */
+/*------------------------ Catalogo --------------------- */
+/*------------------------ Catalogo --------------------- */
+/*------------------------ Catalogo --------------------- */
+
+.cuerpo {
+    max-width: 980px;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.card_catalogo {
+    background-color: #F4F2EF;
+}
+
+.card_img_catalogo {
+    width: 70%;
+    margin: auto;
+    border-radius: 7px;
+    margin-top: 1rem;
+}
+
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+
+.cuerpo_cuenta{
+    padding-top: 5rem;
+}
+
+.avatar {
+    width: 200px;
+    border-radius: 500px;
+}
+
+.lista_cuenta1 > *{
+    color: #958A75;
+    background-color: #F4F2EF;
+    border: #F4F2EF;
+}
+
+.lista_cuenta > *{
+    color: #958A75;
+    background-color: #F4F2EF;
+    border: #F4F2EF;
+    display: flex;
+
+}
+
+
+.linea_h {
+    background-color: #dfd6c8;
+    height: 1px;
+}
+
+@media (max-width: 768px) {
+
+    .cuerpo_cuenta{
+        padding-top: 1rem;
+    }
+
+
+
+    .row_cuenta {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista_cuenta1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;  
+        justify-content: center; 
+        margin-bottom: 3rem;
+        border: solid 1px #dfd6c8;
+    }
+
+    .avatar {
+        width: 100%;
+        border-radius: 500px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .avatar {
+        width: 50%;
+    }
+
+}
+
+
