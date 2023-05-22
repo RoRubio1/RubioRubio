@@ -1,0 +1,65 @@
+/*-------------- Home ---------------*/
+/*-------------- Home ---------------*/
+/*-------------- Home ---------------*/
+
+
+
+.grid-rubio {
+    max-width: 1140px;
+    margin: auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+        "aldeano    aldeano        aldeano          .          .          .       .       .           modelo      modelo      .                 ."
+        "aldeano    aldeano        aldeano          pantalon   pantalon   .       .       cazadora1   .           .           .                 ."
+        ".        .                .                .          .          .       .       kim         kim         kim         kim               ."
+        ".        .                aldeano2         aldeano2   aldeano2   .       .       kim         kim         kim         kim               ."
+        ".        .                .                .          .          .       .       .           .           .           cazadora2         cazadora2"
+        ;
+
+
+    
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .modelo {
+            grid-area: modelo;
+        }
+        
+        .aldeano {
+            grid-area: aldeano;
+        }
+        
+        .pantalon {
+            grid-area: pantalon;
+        }
+        
+        .cazadora1 {
+            grid-area: cazadora1;
+        }
+        
+        .kim {
+            grid-area: kim;
+        }
+        
+        .aldeano2 {
+            grid-area: aldeano2;
+        }
+        
+        .cazadora2 {
+            grid-area: cazadora2;
+        }
+        
+        .camisa-boton {
+            grid-area: camisa-boton;
+        }
+}
+

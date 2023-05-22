@@ -1,0 +1,94 @@
+/*----------------- Cuenta -----------------*/
+/*----------------- Cuenta -----------------*/
+/*----------------- Cuenta -----------------*/
+
+.avatar {
+    width: 200px;
+    border-radius: 500px;
+}
+
+
+/*----------------- index -----------------*/
+/*----------------- index -----------------*/
+/*----------------- index -----------------*/
+
+.aldeano {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.modelo {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.pantalon {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(2);
+    }
+}
+
+.cazadora1 {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(3);
+    }
+}
+
+.kim {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.aldeano2 {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.cazadora2 {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: scale(2);
+    }
+}
+
+
+/*----------------- Marca -----------------*/
+/*----------------- Marca -----------------*/
+/*----------------- Marca -----------------*/
+
+
+.img1_marca {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: translate(600px, 0px);
+    }
+}
+
+
+.grid_marca_img2 {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: translate(-400px, -500px);
+    }
+}
+
+

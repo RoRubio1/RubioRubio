@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.linea_nav {
+  background-color: #dfd6c8;
+  height: 1px;
+}
+
+.navbar {
+  max-width: 1140px;
+  margin: auto;
+}
+.navbar .collapse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: #958A75;
+}
+.navbar .collapse .navbar-carrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  padding-left: 60%;
+}
+.navbar .logo {
+  padding-left: 4rem;
+}
+
+/*------------------------ Home --------------------- */
+/*------------------------ Home --------------------- */
+/*------------------------ Home --------------------- */
+/*------------------------ Home --------------------- */
+body {
+  background-color: #F4F2EF;
+}
+body .cuerpo_home {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/*------------------------ Carrito --------------------- */
+/*------------------------ Carrito --------------------- */
+/*------------------------ Carrito --------------------- */
+/*------------------------ Carrito --------------------- */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor_carrito {
+  padding-top: 3rem;
+}
+
+/*------------------------ Catalogo --------------------- */
+/*------------------------ Catalogo --------------------- */
+/*------------------------ Catalogo --------------------- */
+.cuerpo {
+  max-width: 980px;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+.cuerpo_cuenta {
+  padding-top: 5rem;
+}
+
+/*------ Carrito------*/
+/*------ Carrito------*/
+/*------ Carrito------*/
+.card_header_carrito {
+  background-color: #958A75;
+  color: #F4F2EF;
+  font-size: 25px;
+}
+
+.card_carrito {
+  width: 700px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F4F2EF;
+}
+.card_carrito > * {
+  background-color: #F4F2EF;
+}
+.card_carrito .cuerpo_carta_carrito {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: center;
+  justify-items: center;
+}
+.card_carrito .cuerpo_carta_carrito .contenido_cantidad_precio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 1rem;
+}
+.card_carrito .cuerpo_carta_carrito .titulo_prenda {
+  font-size: 35px;
+}
+.card_carrito .cuerpo_carta_carrito .seleccionar_cantidad {
+  max-width: 193px;
+  background-color: #F4F2EF;
+}
+.card_carrito .cuerpo_carta_carrito .precio {
+  padding-left: 3rem;
+  font-size: 2rem;
+}
+.card_carrito .card_pagar {
+  width: 96%;
+}
+.card_carrito .card_pagar .card_header_pagar {
+  background-color: #958A75;
+  color: #F4F2EF;
+  font-size: 25px;
+}
+.card_carrito .card_pagar .cuerpo_carta_pagar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.card_carrito .card_pagar .cuerpo_carta_pagar .pagar_total {
+  font-size: 33px;
+}
+.card_carrito .card_pagar .cuerpo_carta_pagar .precio_total {
+  font-size: 25px;
+}
+.card_carrito .card_pagar .cuerpo_carta_pagar .btn_pagar {
+  background-color: #958A75;
+  border: #958A75;
+}
+
+/*------------ Catalogo ------------*/
+/*------------ Catalogo ------------*/
+/*------------ Catalogo ------------*/
+.card_catalogo {
+  background-color: #F4F2EF;
+}
+.card_catalogo .card_img_catalogo {
+  width: 70%;
+  margin: auto;
+  border-radius: 7px;
+  margin-top: 1rem;
+}
+
+.contenedor_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 8rem;
+  background-color: #958A75;
+  font-family: "Cormorant Garamond", serif;
+  color: #F4F2EF;
+}
+
+/*--------carrito--------*/
+/*--------carrito--------*/
+/*--------carrito--------*/
+.contenedor_footer {
+  margin-top: 50px;
+}
+
+/*-------------- Home ---------------*/
+/*-------------- Home ---------------*/
+/*-------------- Home ---------------*/
+.grid-rubio {
+  max-width: 1140px;
+  margin: auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas: "aldeano    aldeano        aldeano          .          .          .       .       .           modelo      modelo      .                 ." "aldeano    aldeano        aldeano          pantalon   pantalon   .       .       cazadora1   .           .           .                 ." ".        .                .                .          .          .       .       kim         kim         kim         kim               ." ".        .                aldeano2         aldeano2   aldeano2   .       .       kim         kim         kim         kim               ." ".        .                .                .          .          .       .       .           .           .           cazadora2         cazadora2";
+}
+.grid-rubio .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.grid-rubio .modelo {
+  grid-area: modelo;
+}
+.grid-rubio .aldeano {
+  grid-area: aldeano;
+}
+.grid-rubio .pantalon {
+  grid-area: pantalon;
+}
+.grid-rubio .cazadora1 {
+  grid-area: cazadora1;
+}
+.grid-rubio .kim {
+  grid-area: kim;
+}
+.grid-rubio .aldeano2 {
+  grid-area: aldeano2;
+}
+.grid-rubio .cazadora2 {
+  grid-area: cazadora2;
+}
+.grid-rubio .camisa-boton {
+  grid-area: camisa-boton;
+}
+
+.grid_marca {
+  max-width: 1140px;
+  margin: auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas: ".  .            grid_marca_img1               .                  .            .              ." ".  logo_marca   logo_marca     .                  texto_marca  texto_marca    ." ".  .            .              grid_marca_img2    .            .              .";
+}
+.grid_marca .grid_marca_img1 {
+  grid-area: grid_marca_img1;
+  position: relative;
+  margin-top: 5rem;
+}
+.grid_marca .logo_marca {
+  grid-area: logo_marca;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #958A75;
+}
+.grid_marca .texto_marca {
+  grid-area: texto_marca;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #958A75;
+  text-align: end;
+}
+.grid_marca .grid_marca_img2 {
+  grid-area: grid_marca_img2;
+}
+
+/*----------------- Cuenta -----------------*/
+/*----------------- Cuenta -----------------*/
+/*----------------- Cuenta -----------------*/
+.avatar {
+  width: 200px;
+  border-radius: 500px;
+}
+
+/*----------------- index -----------------*/
+/*----------------- index -----------------*/
+/*----------------- index -----------------*/
+.aldeano {
+  transition-duration: 1s;
+}
+.aldeano:hover {
+  transform: scale(1.2);
+}
+
+.modelo {
+  transition-duration: 1s;
+}
+.modelo:hover {
+  transform: scale(1.5);
+}
+
+.pantalon {
+  transition-duration: 1s;
+}
+.pantalon:hover {
+  transform: scale(2);
+}
+
+.cazadora1 {
+  transition-duration: 1s;
+}
+.cazadora1:hover {
+  transform: scale(3);
+}
+
+.kim {
+  transition-duration: 1s;
+}
+.kim:hover {
+  transform: scale(1.1);
+}
+
+.aldeano2 {
+  transition-duration: 1s;
+}
+.aldeano2:hover {
+  transform: scale(1.5);
+}
+
+.cazadora2 {
+  transition-duration: 1s;
+}
+.cazadora2:hover {
+  transform: scale(2);
+}
+
+/*----------------- Marca -----------------*/
+/*----------------- Marca -----------------*/
+/*----------------- Marca -----------------*/
+.img1_marca {
+  transition-duration: 1s;
+}
+.img1_marca:hover {
+  transform: translate(600px, 0px);
+}
+
+.grid_marca_img2 {
+  transition-duration: 1s;
+}
+.grid_marca_img2:hover {
+  transform: translate(-400px, -500px);
+}
+
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+.linea_h {
+  background-color: #dfd6c8;
+  height: 1px;
+}
+
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+/*------------------------ Cuenta --------------------- */
+.lista_cuenta1 > * {
+  color: #958A75;
+  background-color: #F4F2EF;
+  border: #F4F2EF;
+}
+
+.lista_cuenta > * {
+  color: #958A75;
+  background-color: #F4F2EF;
+  border: #F4F2EF;
+  display: flex;
+}
+
+/* -----------Media query-------------- */
+/* -----------Media query-------------- */
+/* -----------Media query-------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-rubio {
+    max-width: 1140px;
+    margin: auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: "aldeano    aldeano        aldeano          .          .            .           modelo      modelo      .                 ." "aldeano    aldeano        aldeano          pantalon   pantalon     cazadora1   .           .           .                 ." ".        .                .                .          .            kim         kim         kim         kim               ." ".        .                aldeano2         aldeano2   aldeano2     kim         kim         kim         kim               ." ".        .                .                .          .            .           .           .           cazadora2         cazadora2";
+  }
+}
+@media (max-width: 768px) {
+  .grid-rubio {
+    max-width: 1140px;
+    margin: auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: "aldeano    aldeano        aldeano          .          .            .           modelo      modelo      .                 ." "aldeano    aldeano        aldeano          pantalon   pantalon     pantalon    .           .           .                 ." ".          cazadora1      cazadora1        .          .            kim         kim         kim         kim               ." ".          .              aldeano2         aldeano2   aldeano2     kim         kim         kim         kim               ." ".          .              .                .          .            .           .           .           cazadora2         cazadora2";
+  }
+}
+@media (max-width: 768px) {
+  .logo_marca {
+    grid-area: logo_marca;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #958A75;
+  }
+  .grid_marca {
+    max-width: 1140px;
+    margin: auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: ".  .            grid_marca_img1        grid_marca_img1    .                    .              ." ".  logo_marca   logo_marca             texto_marca        texto_marca          texto_marca    texto_marca" ".  .            .                      grid_marca_img2    grid_marca_img2      .              .";
+  }
+}
+@media (max-width: 768px) {
+  .carrito_producto {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor_carrito {
+    width: 90%;
+  }
+  .carrito_producto {
+    width: 50%;
+    border-radius: 7px;
+    margin-top: 1rem;
+  }
+  .card_carrito {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .carrito-contenedor-imagen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .cuerpo_cuenta {
+    padding-top: 1rem;
+  }
+  .row_cuenta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .lista_cuenta1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    border: solid 1px #dfd6c8;
+  }
+  .avatar {
+    width: 100%;
+    border-radius: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .avatar {
+    width: 50%;
+  }
+}
+.imagen_principal {
+  width: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/*------------------- Marca ----------------*/
+/*------------------- Marca ----------------*/
+/*------------------- Marca ----------------*/
+.logo_marca {
+  transition-duration: 1s;
+}
+.logo_marca:hover {
+  transform: translate(-300px, 50px);
+}
+
+.texto_marca {
+  transition-duration: 1s;
+}
+.texto_marca:hover {
+  transform: translate(300px, -300px);
+}/*# sourceMappingURL=styles.css.map */

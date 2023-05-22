@@ -1,0 +1,156 @@
+/* -----------Media query-------------- */
+/* -----------Media query-------------- */
+/* -----------Media query-------------- */
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .grid-rubio {
+        max-width: 1140px;
+        margin: auto;
+        padding: 1rem;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas: 
+            "aldeano    aldeano        aldeano          .          .            .           modelo      modelo      .                 ."
+            "aldeano    aldeano        aldeano          pantalon   pantalon     cazadora1   .           .           .                 ."
+            ".        .                .                .          .            kim         kim         kim         kim               ."
+            ".        .                aldeano2         aldeano2   aldeano2     kim         kim         kim         kim               ."
+            ".        .                .                .          .            .           .           .           cazadora2         cazadora2"
+            ;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .grid-rubio {
+        max-width: 1140px;
+        margin: auto;
+        padding: 1rem;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas: 
+            "aldeano    aldeano        aldeano          .          .            .           modelo      modelo      .                 ."
+            "aldeano    aldeano        aldeano          pantalon   pantalon     pantalon    .           .           .                 ."
+            ".          cazadora1      cazadora1        .          .            kim         kim         kim         kim               ."
+            ".          .              aldeano2         aldeano2   aldeano2     kim         kim         kim         kim               ."
+            ".          .              .                .          .            .           .           .           cazadora2         cazadora2"
+            ;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .logo_marca {
+        grid-area: logo_marca;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #958A75;
+    }
+
+    .grid_marca {
+        max-width: 1140px;
+        margin: auto;
+        padding: 1rem;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas: 
+            ".  .            grid_marca_img1        grid_marca_img1    .                    .              ."
+            ".  logo_marca   logo_marca             texto_marca        texto_marca          texto_marca    texto_marca"
+            ".  .            .                      grid_marca_img2    grid_marca_img2      .              ."
+            ;
+    } 
+    
+}
+
+@media (max-width: 768px) {
+
+    .carrito_producto {
+        width: 100%;    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .contenedor_carrito {
+        width: 90%;
+    }
+
+    .carrito_producto {
+        width: 50%;
+        border-radius: 7px;
+        margin-top: 1rem;
+
+    }
+
+    .card_carrito {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carrito-contenedor-imagen {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .cuerpo_cuenta{
+        padding-top: 1rem;
+    }
+
+
+
+    .row_cuenta {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista_cuenta1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;  
+        justify-content: center; 
+        margin-bottom: 3rem;
+        border: solid 1px #dfd6c8;
+    }
+
+    .avatar {
+        width: 100%;
+        border-radius: 500px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .avatar {
+        width: 50%;
+    }
+    
+}

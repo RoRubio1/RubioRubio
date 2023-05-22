@@ -1,0 +1,21 @@
+/*------------------- Marca ----------------*/
+/*------------------- Marca ----------------*/
+/*------------------- Marca ----------------*/  
+
+
+.logo_marca {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: translate(-300px, 50px);
+    }
+}
+
+
+.texto_marca {
+    transition-duration: 1s;
+
+    &:hover {
+        transform: translate(300px, -300px);
+    }
+}

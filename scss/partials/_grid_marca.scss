@@ -1,0 +1,45 @@
+.grid_marca {
+    max-width: 1140px;
+    margin: auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 1rem;
+    grid-template-areas: 
+        ".  .            grid_marca_img1               .                  .            .              ."
+        ".  logo_marca   logo_marca     .                  texto_marca  texto_marca    ."
+        ".  .            .              grid_marca_img2    .            .              ."
+        ;
+
+
+        .grid_marca_img1 {
+            grid-area: grid_marca_img1;
+            position: relative;
+            margin-top: 5rem;
+        }
+        
+        .logo_marca {
+            grid-area: logo_marca;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 50px;
+            font-weight: 500;
+            color: #958A75;
+        }
+        
+        
+        .texto_marca {
+            grid-area: texto_marca;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #958A75;
+            text-align: end;
+        }
+        
+        .grid_marca_img2 {
+            grid-area: grid_marca_img2;
+        }
+}
+
