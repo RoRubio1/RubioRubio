@@ -75,7 +75,7 @@
 
 
 .img1_marca {
-    transition-duration: 1s;
+    transition-duration: 10s;
 
     &:hover {
         transform: translate(600px, 0px);
@@ -90,5 +90,6 @@
         transform: translate(-400px, -500px);
     }
 }
+
 
 
