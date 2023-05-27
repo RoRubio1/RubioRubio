@@ -163,6 +163,10 @@ main .contenedor_carrito {
   margin-top: 1rem;
 }
 
+.card_catalogo * {
+  color: #958A75;
+}
+
 .contenedor_footer {
   display: flex;
   justify-content: center;
@@ -325,7 +329,7 @@ main .contenedor_carrito {
 /*----------------- Marca -----------------*/
 /*----------------- Marca -----------------*/
 .img1_marca {
-  transition-duration: 10s;
+  transition-duration: 1s;
 }
 .img1_marca:hover {
   transform: translate(600px, 0px);
