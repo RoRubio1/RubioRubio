@@ -162,6 +162,11 @@ main .contenedor_carrito {
   border-radius: 7px;
   margin-top: 1rem;
 }
+.card_catalogo .btn_agregar_a_carrito {
+  background-color: #958A75;
+  border: #958A75;
+  color: #F4F2EF;
+}
 
 .card_catalogo * {
   color: #958A75;
