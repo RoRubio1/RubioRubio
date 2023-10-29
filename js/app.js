@@ -18,7 +18,6 @@ boton1.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -39,7 +38,6 @@ boton2.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -61,7 +59,6 @@ boton3.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -83,7 +80,6 @@ boton4.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -105,7 +101,6 @@ boton5.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -127,7 +122,6 @@ boton6.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -149,7 +143,6 @@ boton7.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -171,7 +164,6 @@ boton8.addEventListener('click', () => {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         showCloseButton:true,
-        footer: '<a href="https://coderhouse.com>Link a coder</a>'
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
@@ -184,25 +176,23 @@ boton8.addEventListener('click', () => {
 });
 
 
-/* const boton2 = document.querySelector('#boton2');
-const boton3 = document.querySelector('#boton3');
-const boton4 = document.querySelector('#boton4');
-const boton5 = document.querySelector('#boton5');
-const boton6 = document.querySelector('#boton6');
-const boton7 = document.querySelector('#boton7');
-const boton8 = document.querySelector('#boton8');
+const btnTostada = document.querySelector('#confirmButtonText');
 
-
-function mostrarMensaje() {
-    alert('¿Deseas agregar el producto al carrito?');
-}
-
-
-boton1.addEventListener('click', mostrarMensaje);
-boton2.addEventListener('click', mostrarMensaje);
-boton3.addEventListener('click', mostrarMensaje);
-boton4.addEventListener('click', mostrarMensaje);
-boton5.addEventListener('click', mostrarMensaje);
-boton6.addEventListener('click', mostrarMensaje);
-boton7.addEventListener('click', mostrarMensaje);
-boton8.addEventListener('click', mostrarMensaje); */
+btnTostada.addEventListener('click', () => {
+    Toastify({
+        text: "This is a toast",
+        duration: 5000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        //newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){
+            Swal.fire({title: 'hola'});
+        } // Callback after click
+      }).showToast();
+})
