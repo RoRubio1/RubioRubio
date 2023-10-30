@@ -49,9 +49,51 @@
             <a class="nav-link" href="./catalogo.html">Catálogo</a>
             <a class="nav-link" href="./cuenta.html">Cuenta</a>
           </div>
-          <a class="navbar-carrito carrito" href="./carrito.html">
-            <img src="../icons/cart.png" alt="Carrito" height="23">
-          </a>
+
+          <div class="container-icon">
+            <div class="container-cart-icon">
+              
+              <a class="navbar-carrito carrito">
+                <img src="../icons/cart.png" alt="Carrito" height="23">
+              </a>
+
+              <div class="count-products">
+                <span id="contador-productos">0</span>
+              </div>
+            </div>
+    
+            <div class="container-cart-products hidden-cart">
+              <div class="row-product hidden">
+                <div class="cart-product">
+                  <div class="info-cart-product">
+                    <span class="cantidad-producto-carrito">1</span>
+                    <p class="titulo-producto-carrito">Zapatos Nike</p>
+                    <span class="precio-producto-carrito">$80</span>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-close"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+              </div>
+    
+              <div class="cart-total hidden">
+                <h3>Total:</h3>
+                <span class="total-pagar">$200</span>
+              </div>
+              <p class="cart-empty">El carrito está vacío</p>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -199,14 +241,7 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <!--<script src="sweetalert2.min.js"></script>-->
-  <script src="./app.js"></script>
-
-  <script src="../js/Producto.js"></script>
-  <script src="../js/Item.js"></script>
   <script src="../js/carrito.js"></script>
-
 </body>
 
 </html>

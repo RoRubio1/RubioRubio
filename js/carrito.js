@@ -1,97 +1,127 @@
-let productos = [];
-let carrito = [];
+const btnCart = document.querySelector('.container-cart-icon');
+const containerCartProducts = document.querySelector(
+	'.container-cart-products'
+);
 
+btnCart.addEventListener('click', () => {
+	containerCartProducts.classList.toggle('hidden-cart');
+});
 
-productos.push(new Producto('Playera 1',700));
-productos.push(new Producto('Camisa manga larga 1',900));
-productos.push(new Producto('Cazadora 1',1000));
-productos.push(new Producto('Camisa manga larga 2',1600));
-productos.push(new Producto('Pantalón 1',1100));
-productos.push(new Producto('Conjunto 1',1000));
-productos.push(new Producto('Camisa manga corta 1',1200));
-productos.push(new Producto('Kimono 1',1200));
+/* ========================= */
+const cartInfo = document.querySelector('.cart-product');
+const rowProduct = document.querySelector('.row-product');
 
+// Lista de todos los contenedores de productos
+const productsList = document.querySelector('.container-items');
 
-localStorage.setItem('productos', JSON.stringify(productos));
+// Variable de arreglos de Productos
+let allProducts = [];
 
+const valorTotal = document.querySelector('.total-pagar');
 
-///obtengo los elementos necesarios del DOM
-const selectProductos = document.querySelector('#productos');
-const btnAgregar = document.querySelector('#agregar');
+const countProducts = document.querySelector('#contador-productos');
 
+const cartEmpty = document.querySelector('.cart-empty');
+const cartTotal = document.querySelector('.cart-total');
 
-////traer los productos del localStorage
-function traerItemsStorage() {
-    productos = JSON.parse(localStorage.getItem('productos')) || [];
-    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+productsList.addEventListener('click', e => {
+	if (e.target.classList.contains('btn-add-cart')) {
+		const product = e.target.parentElement;
 
-}
+		const infoProduct = {
+			quantity: 1,
+			title: product.querySelector('h2').textContent,
+			price: product.querySelector('p').textContent,
+		};
 
+		const exits = allProducts.some(
+			product => product.title === infoProduct.title
+		);
 
-function popularDropdown() {
-    productos.forEach(({nombre,precio}, index) => { 
-        ////aca voy a dibujar las opciones dentro del body del select
-        const option = document.createElement('option');
-        option.textContent = `${nombre} - $${precio}`;
-        option.value = index; ///con esto nos guiamos para saber que objeto del array SELECCIONA
-        selectProductos.appendChild(option);
-    });
-}
+		if (exits) {
+			const products = allProducts.map(product => {
+				if (product.title === infoProduct.title) {
+					product.quantity++;
+					return product;
+				} else {
+					return product;
+				}
+			});
+			allProducts = [...products];
+		} else {
+			allProducts = [...allProducts, infoProduct];
+		}
 
-///DOMContentLoaded es un evento que se triggerea (dispara) cuando se carga el documento completamente
-document.addEventListener('DOMContentLoaded', () => {
-    traerItemsStorage();
-    popularDropdown();
-    dibujarTabla();
+		showHTML();
+	}
+});
 
+rowProduct.addEventListener('click', e => {
+	if (e.target.classList.contains('icon-close')) {
+		const product = e.target.parentElement;
+		const title = product.querySelector('p').textContent;
 
-    ///event listener de agregar un producto al carrito
-    btnAgregar.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const productoSeleccionado = productos.find((item,index) => index === +selectProductos.value);
-        //const productoSeleccionado = productos[+selectProductos.value];
-        if (productoSeleccionado === undefined) {
-            alert('Usted primero debe seleccionar un producto');
-            return; ///hago finalizar la funcion
-        }
-        ///busco el indice del item en el carrito
-        const indiceCarrito = carrito.findIndex((item) => item.producto.nombre === productoSeleccionado.nombre);
+		allProducts = allProducts.filter(
+			product => product.title !== title
+		);
 
-        if (indiceCarrito !== -1) { ///encontro el item
-            carrito[indiceCarrito].cantidad++;
-        }else {
-            const item = new Item(productoSeleccionado,1);
-            ///lo agrego al carrito
-            carrito.push(item);
-        }
+		console.log(allProducts);
 
-        localStorage.setItem('carrito',JSON.stringify(carrito)); ///guardo el carrito actualizado en el localStorage
-        dibujarTabla();
-    })
+		showHTML();
+	}
+});
 
-})
+// Funcion para mostrar  HTML
+const showHTML = () => {
+	if (!allProducts.length) {
+		cartEmpty.classList.remove('hidden');
+		rowProduct.classList.add('hidden');
+		cartTotal.classList.add('hidden');
+	} else {
+		cartEmpty.classList.add('hidden');
+		rowProduct.classList.remove('hidden');
+		cartTotal.classList.remove('hidden');
+	}
 
+	// Limpiar HTML
+	rowProduct.innerHTML = '';
 
+	let total = 0;
+	let totalOfProducts = 0;
 
+	allProducts.forEach(product => {
+		const containerProduct = document.createElement('div');
+		containerProduct.classList.add('cart-product');
 
-function dibujarTabla() {
-    const bodyTabla = document.getElementById('items');
-    const total = document.querySelector('#total');
-    bodyTabla.innerHTML = ``; ///me aseguro de que el body de la tabla no contenga filas
-    carrito.forEach((item) => {
-        const {producto: {nombre:nombrecin,precio}, cantidad} = item;
-       // const {nombre, marca,precio} = producto;
-        bodyTabla.innerHTML = bodyTabla.innerHTML +  `
-        <tr class="text-white">
-            <td >${nombrecin || ''}</td>
-            <td>$${precio || ''}</td>
-            <td>${cantidad || ''}</td>
-            <td>${cantidad * precio || 0}</td>
-        </tr>
-    `;
+		containerProduct.innerHTML = `
+            <div class="info-cart-product">
+                <span class="cantidad-producto-carrito">${product.quantity}</span>
+                <p class="titulo-producto-carrito">${product.title}</p>
+                <span class="precio-producto-carrito">${product.price}</span>
+            </div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-close"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+        `;
 
-    ///calculo el total que tengo
-        total.textContent = carrito.reduce((acc,item) => acc + item.producto.precio*item.cantidad , 0);
+		rowProduct.append(containerProduct);
 
-    });
-}
+		total =
+			total + parseInt(product.quantity * product.price.slice(1));
+		totalOfProducts = totalOfProducts + product.quantity;
+	});
+
+	valorTotal.innerText = `$${total}`;
+	countProducts.innerText = totalOfProducts;
+};
