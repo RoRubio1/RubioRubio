@@ -21,7 +21,7 @@ boton1.addEventListener('click', () => {
     }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
-            console.log('El usuario apreto confirmar');
+            /* console.log('El usuario apreto confirmar'); */
         }else {
             console.log('El usuario cancelo');
         }
